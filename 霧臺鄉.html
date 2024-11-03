@@ -1,0 +1,64 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <table id="dataTable" class="dataframe table-view">
+      <thead>
+        <tr>
+          <th>鄉鎮</th>
+          <th>局處</th>
+          <th>案件名稱</th>
+          <th>經費</th>
+          <th>中央核定補助計畫管制期程</th>
+          <th>預定期程</th>
+          <th>截至113/10/17最新執行情形</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Original table rows content with onclick attribute goes here -->
+        <tr onclick="toggleCard(this)">
+          <td>霧台鄉</td>
+          <td>工務處</td>
+          <td>霧臺村霧大二號橋重建工程</td>
+          <td>總經費:134,600,000中央補助:121,140,000</td>
+          <td>113/9/24進度檢討會議決議:本案請於113年底前發生權責</td>
+          <td>開工:預計113/11/11完工:預計115/5/5</td>
+          <td>
+            本案工程自113/2/23至今多次發包無法決標,113/8/30退回霧台鄉公所重新檢討論設計及預算後重新辦理第3次發包，並於113/9/13~9/23工程公開閱覽，於10/9再次上標，預計10/22開標。決議:請持續掌握進度。
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div style="margin-top: 120px"></div>
+
+    <table border="1" class="dataframe">
+      <thead>
+        <tr style="text-align: right">
+          <th>鄉鎮市</th>
+          <th>一、屏東更韌性</th>
+          <th>二、全齡心照顧</th>
+          <th>三、觀光新戰略</th>
+          <th>四、產業星未來</th>
+          <th>五、安心過生活</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>霧臺鄉</td>
+          <td></td>
+          <td>視訊遠距診療</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- 回上一頁按鈕 -->
+    <button class="back-button" onclick="goBack()">回上一頁</button>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>

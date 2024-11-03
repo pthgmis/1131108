@@ -1,0 +1,71 @@
+/* 表格基本樣式 */
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        border-spacing: 0;
+      }
+      th,
+      td {
+        padding: 8px;
+        border: 1px solid #ddd;
+        text-align: left;
+      }
+      /* 隱藏表格視圖的多餘欄位（從第5欄起），只顯示前4欄 */
+      .table-view thead th:nth-child(n + 5),
+      .table-view tbody td:nth-child(n + 5) {
+        display: none;
+      }
+      /* 卡片樣式 */
+      .card-row td {
+        background-color: #f9f9f9;
+        border: none;
+        padding: 16px;
+      }
+      .card {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        margin: 0 64;
+        padding: 16px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                /* background-color: #e2e2e2; */
+      }
+      .card-item {
+        padding: 8px 0;
+        border-bottom: 1px solid #eee;
+      }
+      .card-item:last-child {
+        border-bottom: none;
+      }
+      .card-item-title {
+        font-weight: bold;
+        color: #555;
+        display: inline-block;
+        width: 120px;
+      }
+      /* 右下角固定位置的按鈕樣式 */
+      .back-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 14px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.3s;
+      }
+      .back-button:hover {
+        background-color: #0056b3;
+      }
+
+      /* 表格每列白灰交替底色 */
+      .table-view tbody tr:nth-child(odd) {
+        background-color: #ffffff;
+      }
+
+      .table-view tbody tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }

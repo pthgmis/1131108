@@ -1,0 +1,186 @@
+<html>
+  <head>
+    <style>
+      /* 表格基本樣式 */
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        border-spacing: 0;
+      }
+      th,
+      td {
+        padding: 8px;
+        border: 1px solid #ddd;
+        text-align: left;
+      }
+      /* 隱藏表格視圖的多餘欄位（從第5欄起），只顯示前4欄 */
+      .table-view thead th:nth-child(n + 5),
+      .table-view tbody td:nth-child(n + 5) {
+        display: none;
+      }
+      /* 卡片樣式 */
+      .card-row td {
+        background-color: #f9f9f9;
+        border: none;
+        padding: 16px;
+      }
+      .card {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 16px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      .card-item {
+        padding: 8px 0;
+        border-bottom: 1px solid #eee;
+      }
+      .card-item:last-child {
+        border-bottom: none;
+      }
+      .card-item-title {
+        font-weight: bold;
+        color: #555;
+        display: inline-block;
+        width: 120px;
+      }
+      /* 右下角固定位置的按鈕樣式 */
+      .back-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 14px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.3s;
+      }
+      .back-button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <table id="dataTable" class="dataframe table-view">
+      <thead>
+        <tr>
+          <th>鄉鎮</th>
+          <th>局處</th>
+          <th>案件名稱</th>
+          <th>經費</th>
+          <th>中央核定補助計畫管制期程</th>
+          <th>預定期程</th>
+          <th>截至113/10/17最新執行情形</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Original table rows content with onclick attribute goes here -->
+        <tr onclick="toggleCard(this)">
+          <td>九如鄉</td>
+          <td>工務處</td>
+          <td>九如鄉巴轆公園及巴轆橋改善工程委託設計技術服務</td>
+          <td>總經費:33,150,000中央補助:13,150,000</td>
+          <td>
+            113/8/6中央檢討會議決議:務必於8/20工程上網招標核定補助計畫務應於113年12月16日(星期一)前執行完成(工程竣工)
+          </td>
+          <td>
+            1.113年度屏東縣九如鄉巴轆公園及巴轆橋改善工程辦理期程:完工:預計114/112.九如鄉巴轆公園及巴轆橋改善工程(遊戲場建置)辦理期程:完工:預計115/1完工:115/春節(縣長施政總報告)
+          </td>
+          <td>
+            1.113年度屏東縣九如鄉巴轆公園及巴轆橋改善工程:預計113/10/24辦理動土典禮，113/11/8開工2.九如鄉巴轆公園及巴轆橋改善工程(遊戲場建置):113/9/26第一次開標，未達三家廠商投標流標。113/10/8第二次開標，1家廠商投標，待政風處通知評選日期。決議:請持續掌握進度。
+          </td>
+        </tr>
+        <tr onclick="toggleCard(this)">
+          <td>九如鄉</td>
+          <td>工務處</td>
+          <td>高屏2快銜接國3系統交流道週邊道路整體規劃及可行性評估</td>
+          <td>總經費:3,700,000(縣款)</td>
+          <td>__</td>
+          <td>
+            勞務開工:113/11預定期中報告完成：114/3/31預定期末報告完成：114/6/30
+          </td>
+          <td>
+            113/9/19開標，預計113/10/22辦理評選，預計11月底前完成訂約。決議:請持續掌握進度。
+          </td>
+        </tr>
+        <tr onclick="toggleCard(this)">
+          <td>九如鄉</td>
+          <td></td>
+          <td>屏東縣九如鄉衛生所重建工程</td>
+          <td>預估總經費:105,000,000</td>
+          <td>__</td>
+          <td>
+            1.前置作業：113/3-8(1) 辦理耐震能力初、詳評(2)
+            提報中央重建經費補助計畫(3)
+            規劃設計需求調查前置作業2.規劃設計階段：113/9-114/5(1)
+            規劃設計評選、訂約(2) 工程預算圖說審查修正(3) 建照申請(4)
+            監造計畫書3.發包階段：114/3-8(1) 工程招標工程、訂約(2)
+            施工計畫品質計劃書(3)
+            五大管線申請4.施工階段：114/8-116/25.驗收階段：116/3-5(1)
+            竣工驗收(2) 結算核銷
+          </td>
+          <td>
+            經費:衛福部預計113/10/18辦理複審。用地:
+            研議重建用地暫為九如全人關懷園區閒置空間之用(九和段1062、1067、1068、1069、1070及1071等6筆地號)
+          </td>
+        </tr>
+        <tr onclick="toggleCard(this)">
+          <td>九如鄉</td>
+          <td>文化處</td>
+          <td>九如鄉圖書館新建計畫</td>
+          <td>預估總經費:100,580,000規劃設計暨監造費6,755,800(縣款)</td>
+          <td></td>
+          <td>勞務標公告：113/10</td>
+          <td>勞務備標作業中，預計113/10/18簽出。</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- 回上一頁按鈕 -->
+    <button class="back-button" onclick="goBack()">回上一頁</button>
+
+    <script>
+      function toggleCard(row) {
+        if (
+          row.nextElementSibling &&
+          row.nextElementSibling.classList.contains("card-row")
+        ) {
+          row.nextElementSibling.remove();
+          return;
+        }
+        const existingCardRow = document.querySelector(".card-row");
+        if (existingCardRow) existingCardRow.remove();
+
+        const cardRow = document.createElement("tr");
+        cardRow.classList.add("card-row");
+        const cardCell = document.createElement("td");
+        cardCell.colSpan = 4;
+        const controlPeriod = row.children[4].textContent;
+        const schedule = row.children[5].textContent;
+        const latestProgress = row.children[6].textContent;
+        cardCell.innerHTML = `
+          <div class="card">
+            <div class="card-item">
+              <span class="card-item-title">中央核定補助計畫管制期程：</span>${controlPeriod}
+            </div>
+            <div class="card-item">
+              <span class="card-item-title">預定期程：</span>${schedule}
+            </div>
+            <div class="card-item">
+              <span class="card-item-title">最新執行情形：</span>${latestProgress}
+            </div>
+          </div>
+        `;
+        cardRow.appendChild(cardCell);
+        row.parentNode.insertBefore(cardRow, row.nextSibling);
+      }
+
+      function goBack() {
+        window.history.back();
+      }
+    </script>
+  </body>
+</html>

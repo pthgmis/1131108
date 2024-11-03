@@ -1,0 +1,86 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <table id="dataTable" class="dataframe table-view">
+      <thead>
+        <tr>
+          <th>鄉鎮</th>
+          <th>局處</th>
+          <th>案件名稱</th>
+          <th>經費</th>
+          <th>中央核定補助計畫管制期程</th>
+          <th>預定期程</th>
+          <th>截至113/10/17最新執行情形</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Original table rows content with onclick attribute goes here -->
+        <tr onclick="toggleCard(this)">
+          <td>新埤鄉</td>
+          <td>工務處</td>
+          <td>(112)屏東縣新埤鄉綜合休閒公園環境改善工程委託設計技術服務</td>
+          <td>總經費:30,000,000中央補助:10,000,000</td>
+          <td>
+            113/8/6中央檢討會議決議:務必於8/20工程上網招標核定補助計畫務應於113年12月16日(星期一)前執行完成(工程竣工)
+          </td>
+          <td>
+            景觀工程:完工:114/5月底完工驗收:預計114/7月驗收完成。遊戲場及其他設施建置:完工:預計114/10月底驗收:預計114/12月完工:115/春節(縣長施政總報告)
+          </td>
+          <td>
+            景觀工程113/9/26評選完成，10/11決標動土典禮：待縣長室決定開工：預計113/11/5遊戲場及其他(籃球場及體健)設施建置細部設計:113/9/26核定公告招標：113/10/18第一次開標(含公開閱覽)：113/11/12開標決議:請持續掌握進度。
+          </td>
+        </tr>
+        <tr onclick="toggleCard(this)">
+          <td>新埤鄉</td>
+          <td>衛生局</td>
+          <td>屏東縣新埤鄉衛生所重建工程</td>
+          <td>預估總經費:100,000,000</td>
+          <td>__</td>
+          <td>
+            1.前置作業：113/3-8(1) 辦理耐震能力初、詳評(2)
+            提報中央重建經費補助計畫(3)
+            規劃設計需求調查前置作業2.規劃設計階段：113/9-114/5(1)
+            規劃設計評選、訂約(2) 工程預算圖說審查修正(3) 建照申請(4)
+            監造計畫書3.發包階段：114/3-8(1) 工程招標工程、訂約(2)
+            施工計畫品質計劃書(3)
+            五大管線申請4.施工階段：114/8-116/25.驗收階段：116/3-5(1)
+            竣工驗收(2) 結算核銷
+          </td>
+          <td>經費:衛福部審查中。用地:尚在評估中。</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div style="margin-top: 120px"></div>
+
+    <table border="1" class="dataframe">
+      <thead>
+        <tr style="text-align: right">
+          <th>鄉鎮市</th>
+          <th>一、屏東更韌性</th>
+          <th>二、全齡心照顧</th>
+          <th>三、觀光新戰略</th>
+          <th>四、產業星未來</th>
+          <th>五、安心過生活</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>新埤鄉</td>
+          <td>已完成道路桿線地下化-屏鵝公路電線電纜地下化</td>
+          <td>社區關懷據點6處</td>
+          <td></td>
+          <td></td>
+          <td>113年自來水推動重點地區</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- 回上一頁按鈕 -->
+    <button class="back-button" onclick="goBack()">回上一頁</button>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>

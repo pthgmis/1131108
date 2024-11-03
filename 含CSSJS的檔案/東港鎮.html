@@ -1,0 +1,300 @@
+<html>
+  <head>
+    <style>
+      /* 表格基本樣式 */
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        border-spacing: 0;
+      }
+      th,
+      td {
+        padding: 8px;
+        border: 1px solid #ddd;
+        text-align: left;
+      }
+      /* 隱藏表格視圖的多餘欄位（從第5欄起），只顯示前4欄 */
+      .table-view thead th:nth-child(n + 5),
+      .table-view tbody td:nth-child(n + 5) {
+        display: none;
+      }
+      /* 卡片樣式 */
+      .card-row td {
+        background-color: #f9f9f9;
+        border: none;
+        padding: 16px;
+      }
+      .card {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 16px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      .card-item {
+        padding: 8px 0;
+        border-bottom: 1px solid #eee;
+      }
+      .card-item:last-child {
+        border-bottom: none;
+      }
+      .card-item-title {
+        font-weight: bold;
+        color: #555;
+        display: inline-block;
+        width: 120px;
+      }
+      /* 右下角固定位置的按鈕樣式 */
+      .back-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 14px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.3s;
+      }
+      .back-button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <table id="dataTable" class="dataframe table-view">
+      <thead>
+        <tr>
+          <th>鄉鎮</th>
+          <th>局處</th>
+          <th>案件名稱</th>
+          <th>經費</th>
+          <th>中央核定補助計畫管制期程</th>
+          <th>預定期程</th>
+          <th>截至113/10/17最新執行情形</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Original table rows content with onclick attribute goes here -->
+        <tr onclick="toggleCard(this)">
+          <td>東港鎮</td>
+          <td>工務處</td>
+          <td>
+            財政部南區國稅局東港稽徵所辦公廳舍新建工程(含委託規劃設計監造)
+          </td>
+          <td>總經費:154,806,000(中央委託代辦)</td>
+          <td></td>
+          <td>細部設計核定：114/3工程開工：114/6</td>
+          <td>
+            113/10/17辦理第二次基本設計審查會，審查結果不通過。10/25進行基本設計檢討工作會議。11/15進行第三次基本設計審查會。決議:請持續掌握進度。
+          </td>
+        </tr>
+        <tr onclick="toggleCard(this)">
+          <td>東港鎮</td>
+          <td>工務處</td>
+          <td>屏東縣東港社會福利綜合館新建工程</td>
+          <td>社福館總經費:271,349,774(中央補助:80,000,000)公園:25,941,287</td>
+          <td>主體開工 110/8竣工驗收 -公園 -</td>
+          <td>主體:主建物完工114/2公園:竣工 113/11開幕啟用 114/3</td>
+          <td>
+            工務處:主體工程截至113/10/13，預定進度:73.17%，實際進度:73.23%施作項目:室內裝修、消防空調及電梯工程等工項施作周邊公園截至113/10/13，預定進度:33.61%，實際進度:34.13%施作項目:涼棚鋼構組裝，廣場連鎖磚鋪設及喬木種植社會處：公園用地無償租用契約至114年6/30止，本處業依徐富癸立委113年9/26來函，於10/17簽准函台鐵公司申請土地租用(租金費用依徐立委113/6/27協商結果以土地優惠利率3%計算)，後續依台鐵公司期程，預計114/6月底前完成簽約。決議:請持續掌握進度。
+          </td>
+        </tr>
+        <tr onclick="toggleCard(this)">
+          <td>東港鎮</td>
+          <td>工務處</td>
+          <td>屏東縣立東港高中學校午餐廚房興建工程</td>
+          <td>總經費:43,820,472(縣款)向中央爭取經費:5900萬(尚未核定)</td>
+          <td></td>
+          <td>開工:預計114/1(工期400日曆天)完工:預計115/3</td>
+          <td>
+            前已流標2次，10/14再次公告上網招標，預計10/29開標。決議:請持續掌握進度。
+          </td>
+        </tr>
+        <tr onclick="toggleCard(this)">
+          <td>東港鎮</td>
+          <td>工務處</td>
+          <td>東港高中師生宿舍新建工程</td>
+          <td>總經費58,778,225(縣款)</td>
+          <td></td>
+          <td>114/1開工（工期預估1年半）115/7完工</td>
+          <td>1.建照於9/26取得。2.預算書圖調整備標中。決議:請持續掌握進度。</td>
+        </tr>
+        <tr onclick="toggleCard(this)">
+          <td>東港鎮</td>
+          <td>工務處</td>
+          <td>牛埔溪排水改善工程(無名橋~革新橋)-橋梁改建(無名橋)</td>
+          <td>總經費:40,075,000中央補助:21,330,000</td>
+          <td>同意轉正後3個月內完成工程採購作業112/3/31 轉正113/12/10完工</td>
+          <td>114/1 完工</td>
+          <td>
+            截至113/10/21止，工程預定進度54.4％，實際進度48.7%。目前工地施作:1.既有箱涵結構物打除及第一階段圍堰施作完成。2.第一階段箱涵基礎腳施作完成及牆筋綁紮，預計本週施作。會中補充：經了解本案前因台水、中華電信等管線遷移而影響進度，後又因颱風造成工程進度落後。決議；展延工期部分請加速簽辦。
+          </td>
+        </tr>
+        <tr onclick="toggleCard(this)">
+          <td>東港鎮</td>
+          <td>水利處</td>
+          <td>
+            東港第一排水護岸改善工程(新溝二號橋~2K+271)(第三期)東港第一排水護岸改善工程(第四期)含橋梁改建
+          </td>
+          <td>
+            第三期總經費：97,450,000中央補助：工程費75,100,000用地費15,015,000第四期總經費：712,000,000中央補助：工程費310,700,000用地費280,000,000
+          </td>
+          <td>
+            第三期：完成工程發包：111/11完成期限：114/12第四期：完成協議價購：114/12
+          </td>
+          <td>
+            第三期：竣工：:113/12第四期：預算書提送：113/11工程上網：114/5工程決標：114/7工程完工：116/5
+          </td>
+          <td>
+            第三期：截至10/13止，預定進度79.02%，實際進度81.61%。右岸帽梁施作。第四期：水利署113年9月5日核定補助，預算書圖修正中。決議：請再檢討期程。
+          </td>
+        </tr>
+        <tr onclick="toggleCard(this)">
+          <td>東港鎮</td>
+          <td>水利處</td>
+          <td>牛埔溪排水改善工程(無名橋~革新橋)(二工區)</td>
+          <td>總經費：85,500,000中央補助工程費67,500,000用地費12,600,000</td>
+          <td>
+            同意轉正後3個月內完成工程採購作業轉正：112/3/31 完工：113/8/28
+          </td>
+          <td>工程完工：113/11</td>
+          <td>
+            截至10/15，預定進度84.80%，實際進度85.48%辦理：1.右岸1K+070~1K+090堤後擋牆土方開挖及PC澆置、基礎及牆身鋼筋綁紮、模板組立及澆置。2.左岸L1堤後排水流入工牆身鋼筋綁紮及模板組立。3.右岸1K+040~1K+070側溝開挖及PC澆置。4.環境整理。
+          </td>
+        </tr>
+        <tr onclick="toggleCard(this)">
+          <td>東港鎮</td>
+          <td>水利處</td>
+          <td>
+            東港鎮大潭社區排水改善工程一工區(大潭社區箱涵改善545公尺)二工區(排水路整治，L=1893m，閘門改建2座、新建閘門1座、箱涵改建2處，排水路清疏468m)
+          </td>
+          <td>
+            一工區總經費：111,100,000中央補助：工程費105,100,000用地費4,200,000二工區總經費：250,000,000中央補助工程費198,000,000用地費36,400,000
+          </td>
+          <td>
+            一工區:同意轉正後3個月內完成工程採購作業轉正：112/3/31
+            工程完工：114/4/27 二工區:完成協議價購：114/12
+          </td>
+          <td>
+            一工區工程完工：114/6 工程驗收：114/7
+            二工區個案變更提送變更書圖：113/12內政部都委會審查：114/5內政部都委會公告：114/7
+          </td>
+          <td>
+            一工區：截至10/13止，工程進度預定21.97%，實際進度35.7%，調節池施作。二工區：1.大鵬灣都市計畫通盤檢討案，鵬管處預計10月提報內政部審議。2.本府同步進行個案變更。目前辦理招標作業中，預計113/12完成招標。決議：會後請與都計科聯繫掌握都市計畫變更事宜。
+          </td>
+        </tr>
+        <tr onclick="toggleCard(this)">
+          <td>東港鎮</td>
+          <td>水利處</td>
+          <td>屏東縣東港鎮水資源回收中心(第一期)新建工程</td>
+          <td>總經費：462,270,000中央補助：453,024,600</td>
+          <td>__</td>
+          <td>申報竣工：113/11 完成正驗：114/2</td>
+          <td>
+            執行情形：1.已完成施工項目，預計10/20申請停工，辦理第三次變更設計預算書，預計10月底提送。2.目前辦理竣工文件及結算作業，預計113年11月底申報竣工。
+          </td>
+        </tr>
+        <tr onclick="toggleCard(this)">
+          <td>東港鎮</td>
+          <td>水利處</td>
+          <td>
+            屏東縣東港鎮污水下水道系統(第一期)分支管及用戶接管工程(第一標)
+          </td>
+          <td>總經費：214,000,000中央補助：工程費199,020,000</td>
+          <td>
+            屏東縣東港鎮污水下水道系統第一期第二次修正實施計畫：104年~114年
+          </td>
+          <td>公開閱覽及上網招標：113/11工程決標：113/12</td>
+          <td>
+            本工程於113/2/15辦理公開招標經三次無人投標流標，經修正預算書後於8/2公開招標亦經三次無人投標，本處9/16邀集顧問公司召開研商會議，修正預算書10/7提送至府，10/16函文送國土署核備，國土署備查後預計11月初上網。
+          </td>
+        </tr>
+        <tr onclick="toggleCard(this)">
+          <td>東港鎮</td>
+          <td>水利處</td>
+          <td>牛埔排水急要治理工程(東港第一大排水匯流口 匯流口~無名橋1)</td>
+          <td>總經費：161,100,000中央補助：工程費97,740,000用地費47,250,000</td>
+          <td>__</td>
+          <td>
+            預算書提送：114/1工程上網：114/7工程決標：114/9工程完工：116/3
+          </td>
+          <td>
+            113/8/30設計原則核定，10/18召開第一次細部設計審查。決議：請再檢討期程。
+          </td>
+        </tr>
+        <tr onclick="toggleCard(this)">
+          <td>東港鎮</td>
+          <td>文化處</td>
+          <td>屏東縣王船文化館工程</td>
+          <td>總經費711,185,810中央補助560,000,000</td>
+          <td></td>
+          <td>工程開工:111/3(705日曆天)建物主體完工113/8/7</td>
+          <td>
+            執行情形:原訂初驗缺失改至113年10月11日，因山陀兒颱風侵襲導至植栽需重新整理及停止上班，故改善延長4天至113年10月15日。預計10底完成初驗複驗。
+          </td>
+        </tr>
+        <tr onclick="toggleCard(this)">
+          <td>東港鎮</td>
+          <td>文化處</td>
+          <td>屏東縣王船文化館展示統包工程</td>
+          <td>總經費:141,781,673中央補助46,649,072</td>
+          <td></td>
+          <td>
+            發包:112/2工程開工:113/4/10(360日曆天)竣工：114/4開館:
+            113/12(1F空間配合論壇於今年9月先行開放使用，整體工程預計113年12月中旬完工，預計113年12月底開館營運)
+          </td>
+          <td>
+            執行情形：工程進度(截至10/15)：預定進度44.1%，實際進度44.9%，超進0.8%。工作項目：1.王船彩繪：進行船體打底。2.展示裝修：3樓、4樓隔間施作及2樓展櫃施作OT專案管理無廠商投標檢討原因:1.本案於113/1/8至113/4/11，歷經3次招標公告，期間為擴大投資誘因與增加投資意願，修定沉浸劇場由縣府每三年更展、履約保證金由原90萬元調降為50萬元、廠商每年提撥繳入建築修繕維護專戶之使用範圍擴大至建物與展示設備使用，惟修改後之招商條件仍無廠商投標。2.經廠商回饋，無投標原因為展示空間過大，商業空間比例過小致較難能持續營運管理。
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- 回上一頁按鈕 -->
+    <button class="back-button" onclick="goBack()">回上一頁</button>
+
+    <script>
+      function toggleCard(row) {
+        if (
+          row.nextElementSibling &&
+          row.nextElementSibling.classList.contains("card-row")
+        ) {
+          row.nextElementSibling.remove();
+          return;
+        }
+        const existingCardRow = document.querySelector(".card-row");
+        if (existingCardRow) existingCardRow.remove();
+
+        const cardRow = document.createElement("tr");
+        cardRow.classList.add("card-row");
+        const cardCell = document.createElement("td");
+        cardCell.colSpan = 4;
+        const controlPeriod = row.children[4].textContent;
+        const schedule = row.children[5].textContent;
+        const latestProgress = row.children[6].textContent;
+        cardCell.innerHTML = `
+          <div class="card">
+            <div class="card-item">
+              <span class="card-item-title">中央核定補助計畫管制期程：</span>${controlPeriod}
+            </div>
+            <div class="card-item">
+              <span class="card-item-title">預定期程：</span>${schedule}
+            </div>
+            <div class="card-item">
+              <span class="card-item-title">最新執行情形：</span>${latestProgress}
+            </div>
+          </div>
+        `;
+        cardRow.appendChild(cardCell);
+        row.parentNode.insertBefore(cardRow, row.nextSibling);
+      }
+
+      function goBack() {
+        window.history.back();
+      }
+    </script>
+  </body>
+</html>

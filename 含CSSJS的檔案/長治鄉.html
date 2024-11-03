@@ -1,0 +1,220 @@
+<html>
+  <head>
+    <style>
+      /* 表格基本樣式 */
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        border-spacing: 0;
+      }
+      th,
+      td {
+        padding: 8px;
+        border: 1px solid #ddd;
+        text-align: left;
+      }
+      /* 隱藏表格視圖的多餘欄位（從第5欄起），只顯示前4欄 */
+      .table-view thead th:nth-child(n + 5),
+      .table-view tbody td:nth-child(n + 5) {
+        display: none;
+      }
+      /* 卡片樣式 */
+      .card-row td {
+        background-color: #f9f9f9;
+        border: none;
+        padding: 16px;
+      }
+      .card {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 16px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      .card-item {
+        padding: 8px 0;
+        border-bottom: 1px solid #eee;
+      }
+      .card-item:last-child {
+        border-bottom: none;
+      }
+      .card-item-title {
+        font-weight: bold;
+        color: #555;
+        display: inline-block;
+        width: 120px;
+      }
+      /* 右下角固定位置的按鈕樣式 */
+      .back-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 14px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.3s;
+      }
+      .back-button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <table id="dataTable" class="dataframe table-view">
+      <thead>
+        <tr>
+          <th>鄉鎮</th>
+          <th>局處</th>
+          <th>案件名稱</th>
+          <th>經費</th>
+          <th>中央核定補助計畫管制期程</th>
+          <th>預定期程</th>
+          <th>截至113/10/17最新執行情形</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Original table rows content with onclick attribute goes here -->
+        <tr onclick="toggleCard(this)">
+          <td>長治鄉</td>
+          <td>工務處</td>
+          <td>
+            新屏23線(長治百合聯外道路)拓建工程綜合規劃及第一階段環境影響評估
+          </td>
+          <td>勞務費(經費爭取中)7,500,000</td>
+          <td>__</td>
+          <td>本案經費爭取中。</td>
+          <td>
+            1.本府已於113/8/20提送修正計畫至交通部公路局南區養護工程分局。2.公路局於113/9/27納入審議小組辦理審議作業。決議:請持續掌握進度。
+          </td>
+        </tr>
+        <tr onclick="toggleCard(this)">
+          <td>長治鄉</td>
+          <td>水利處</td>
+          <td>
+            牛稠溪排水改善工程(第二期)委託測量設計技術服務牛稠溪排水改善工程(第二期)(含橋梁改建)牛稠溪排水上游滯洪池新建工程
+          </td>
+          <td>
+            8,424,000(縣款)第二期總經費：304,000,000中央補助：工程費243,380,000用地費41,300,000滯洪池總經費：138,000,000中央補助：工程費130,000,000用地費5,600,000
+          </td>
+          <td>第二期完成協議價購：114/12滯洪池完成協議價購：114/12</td>
+          <td>
+            牛稠溪排水改善工程(第二期)(含橋梁改建)：預算書提送：113/10工程上網：114/5工程決標：114/6工程完工：115/11牛稠溪排水上游滯洪池新建工程：勞務決標：113/11完成細部設計：114/4
+          </td>
+          <td>
+            水利處：第二期：發包文件廠商已於113/10/25提送至府。滯洪池：準備辦理勞務招標作業。民政處：1.長治鄉第二公墓遷葬進度截至113/10/15已完成703座，餘123座。2.經長治鄉公所初步查估，代為遷葬經費需約新臺幣373萬2,342元。決議：請再檢討期程。
+          </td>
+        </tr>
+        <tr onclick="toggleCard(this)">
+          <td>長治鄉</td>
+          <td>衛生局</td>
+          <td>屏東縣長治鄉衛生所重建工程</td>
+          <td>預估總經費:103,470,000</td>
+          <td>__</td>
+          <td>
+            1.前置作業：113/3-8(1) 辦理耐震能力初、詳評(2)
+            提報中央重建經費補助計畫(3)
+            規劃設計需求調查前置作業2.規劃設計階段：113/9-114/5(1)
+            規劃設計評選、訂約(2) 工程預算圖說審查修正(3) 建照申請(4)
+            監造計畫書3.發包階段：114/3-8(1) 工程招標工程、訂約(2)
+            施工計畫品質計劃書(3)
+            五大管線申請4.施工階段：114/8-116/25.驗收階段：116/3-5(1)
+            竣工驗收(2) 結算核銷
+          </td>
+          <td>經費:113/10/18衛服部辦理審查會議。用地:重建用地重新評估中。</td>
+        </tr>
+        <tr onclick="toggleCard(this)">
+          <td>長治鄉</td>
+          <td>農業處</td>
+          <td>2025屏東熱帶農業博覽會活動</td>
+          <td>總經費:50,000,000（縣款代墊）</td>
+          <td></td>
+          <td>
+            1.主展區（物產館） 發包：113/10 完工：114/12.副展區（含周邊L型長廊）
+            發包：113/10 完工：114/13.戶外彩稻區 發包：113/10
+            完工：114/14.其他基礎工項 發包：113/11 完工：114/1
+          </td>
+          <td>
+            (一)主展區（物產館）：備標中。(二)副展區（含周邊L型長廊）：備標中。(三)戶外彩稻區：備標中。
+            (四)其他基礎工項：備標中。決議：發包文件請於本周內簽出。
+          </td>
+        </tr>
+        <tr onclick="toggleCard(this)">
+          <td>長治鄉</td>
+          <td>農業處</td>
+          <td>屏東熱帶農業特色產業園區開發專案</td>
+          <td>廠商投資經費2,106,458,980</td>
+          <td>__</td>
+          <td>
+            開發案簽約:111/4/11工程開工:111/12//30(848日曆天)預定完工:114/4/25
+          </td>
+          <td>
+            截至113年10月11日，預定進度為52.29%，實際進度為49.37%(工程進度暫時落後-2.92%)，因受颱風與強降雨影響，導致聯外排水路海豐圳雨水倒灌，現況為排水工程施作及進土作業。
+          </td>
+        </tr>
+        <tr onclick="toggleCard(this)">
+          <td>長治鄉</td>
+          <td>農業處</td>
+          <td>屏東縣熱帶農業特色產業園區農業物產館營運管理委託經營案</td>
+          <td>總經費3,500,000（縣款）</td>
+          <td>
+            113/8/6中央檢討會議決議:務必於8/20工程上網招標核定補助計畫務應於113年12月16日(星期一)前執行完成(工程竣工)
+          </td>
+          <td>
+            議價決標：113/10/8期初督導會議:113/10/22履約期限:114/9/30成果報告:114/11/1
+          </td>
+          <td>
+            本案113年10月8日議價完成，將於113年10月22日召開本案期初執行督導會議，得標廠商為階梯影像製作有限公司，其應負責農業物產館場館合約期間內之營運管理，預計11月份針對場館進行空間重新配置規劃，以迎接即將到來之2025屏東熱帶農業博覽會活動。
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- 回上一頁按鈕 -->
+    <button class="back-button" onclick="goBack()">回上一頁</button>
+
+    <script>
+      function toggleCard(row) {
+        if (
+          row.nextElementSibling &&
+          row.nextElementSibling.classList.contains("card-row")
+        ) {
+          row.nextElementSibling.remove();
+          return;
+        }
+        const existingCardRow = document.querySelector(".card-row");
+        if (existingCardRow) existingCardRow.remove();
+
+        const cardRow = document.createElement("tr");
+        cardRow.classList.add("card-row");
+        const cardCell = document.createElement("td");
+        cardCell.colSpan = 4;
+        const controlPeriod = row.children[4].textContent;
+        const schedule = row.children[5].textContent;
+        const latestProgress = row.children[6].textContent;
+        cardCell.innerHTML = `
+          <div class="card">
+            <div class="card-item">
+              <span class="card-item-title">中央核定補助計畫管制期程：</span>${controlPeriod}
+            </div>
+            <div class="card-item">
+              <span class="card-item-title">預定期程：</span>${schedule}
+            </div>
+            <div class="card-item">
+              <span class="card-item-title">最新執行情形：</span>${latestProgress}
+            </div>
+          </div>
+        `;
+        cardRow.appendChild(cardCell);
+        row.parentNode.insertBefore(cardRow, row.nextSibling);
+      }
+
+      function goBack() {
+        window.history.back();
+      }
+    </script>
+  </body>
+</html>

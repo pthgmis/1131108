@@ -1,0 +1,158 @@
+<html>
+  <head>
+    <style>
+      /* 表格基本樣式 */
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        border-spacing: 0;
+      }
+      th,
+      td {
+        padding: 8px;
+        border: 1px solid #ddd;
+        text-align: left;
+      }
+      /* 隱藏表格視圖的多餘欄位（從第5欄起），只顯示前4欄 */
+      .table-view thead th:nth-child(n + 5),
+      .table-view tbody td:nth-child(n + 5) {
+        display: none;
+      }
+      /* 卡片樣式 */
+      .card-row td {
+        background-color: #f9f9f9;
+        border: none;
+        padding: 16px;
+      }
+      .card {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 16px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      .card-item {
+        padding: 8px 0;
+        border-bottom: 1px solid #eee;
+      }
+      .card-item:last-child {
+        border-bottom: none;
+      }
+      .card-item-title {
+        font-weight: bold;
+        color: #555;
+        display: inline-block;
+        width: 120px;
+      }
+      /* 右下角固定位置的按鈕樣式 */
+      .back-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 14px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.3s;
+      }
+      .back-button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <table id="dataTable" class="dataframe table-view">
+      <thead>
+        <tr>
+          <th>鄉鎮</th>
+          <th>局處</th>
+          <th>案件名稱</th>
+          <th>經費</th>
+          <th>中央核定補助計畫管制期程</th>
+          <th>預定期程</th>
+          <th>截至113/10/17最新執行情形</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Original table rows content with onclick attribute goes here -->
+        <tr onclick="toggleCard(this)">
+          <td>萬巒鄉</td>
+          <td>水利處</td>
+          <td>185縣道40K+100處易淹水區排水改善工程</td>
+          <td>
+            總經費：191,000,000中央補助：工程費115,000,000用地費53,200,000
+          </td>
+          <td>同意轉正後1個月內完成工程採購作業轉正：113/9/18</td>
+          <td>
+            預算書提送：113/11工程上網：114/5工程決標：114/7工程完工：116/5
+          </td>
+          <td>非都變更內政部尚在審查。決議：請持續追蹤非都變更審查進度。</td>
+        </tr>
+        <tr onclick="toggleCard(this)">
+          <td>萬巒鄉</td>
+          <td>水利處</td>
+          <td>
+            萬金排水3K+122~3K+961護岸新建工程(含橋梁改建)(中段渠道改善作業)
+          </td>
+          <td>
+            萬金排水總經費：101,000,000中央補助：工程費78,900,000用地費14,000,000
+          </td>
+          <td>萬金排水：完成協議價購：114/12</td>
+          <td>
+            萬金排水：預算書提送：113/12工程上網：114/2工程決標：114/4工程完工：115/10
+          </td>
+          <td>
+            萬金排水：水利署113/9/5核定補助，目前配合中央補助經費研議圖說修正事宜。決議：萬金排水一案，請再檢討期程。
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- 回上一頁按鈕 -->
+    <button class="back-button" onclick="goBack()">回上一頁</button>
+
+    <script>
+      function toggleCard(row) {
+        if (
+          row.nextElementSibling &&
+          row.nextElementSibling.classList.contains("card-row")
+        ) {
+          row.nextElementSibling.remove();
+          return;
+        }
+        const existingCardRow = document.querySelector(".card-row");
+        if (existingCardRow) existingCardRow.remove();
+
+        const cardRow = document.createElement("tr");
+        cardRow.classList.add("card-row");
+        const cardCell = document.createElement("td");
+        cardCell.colSpan = 4;
+        const controlPeriod = row.children[4].textContent;
+        const schedule = row.children[5].textContent;
+        const latestProgress = row.children[6].textContent;
+        cardCell.innerHTML = `
+          <div class="card">
+            <div class="card-item">
+              <span class="card-item-title">中央核定補助計畫管制期程：</span>${controlPeriod}
+            </div>
+            <div class="card-item">
+              <span class="card-item-title">預定期程：</span>${schedule}
+            </div>
+            <div class="card-item">
+              <span class="card-item-title">最新執行情形：</span>${latestProgress}
+            </div>
+          </div>
+        `;
+        cardRow.appendChild(cardCell);
+        row.parentNode.insertBefore(cardRow, row.nextSibling);
+      }
+
+      function goBack() {
+        window.history.back();
+      }
+    </script>
+  </body>
+</html>
