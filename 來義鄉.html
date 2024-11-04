@@ -1,53 +1,59 @@
-<html>
-  <head>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <table id="dataTable" class="dataframe table-view">
-      <thead>
-        <tr>
-          <th>鄉鎮</th>
-          <th>局處</th>
-          <th>案件名稱</th>
-          <th>經費</th>
-          <th>中央核定補助計畫管制期程</th>
-          <th>預定期程</th>
-          <th>截至113/10/17最新執行情形</th>
-        </tr>
-      </thead>
-      <tbody>
-        <!-- Original table rows content with onclick attribute goes here -->
-      </tbody>
-    </table>
 
-    <div style="margin-top: 120px"></div>
+    <html>
+      <head>
+        <link rel="stylesheet" href="styles.css" />
+      </head>
+      <body>
+        <h2>來義鄉 - 列管資料</h2>
+        <table id="dataTable" class="dataframe table-view">
+          <table border="1" class="dataframe dataframe table-view">
+  <thead>
+    <tr style="text-align: right;">
+      <th>鄉鎮</th>
+      <th>局處</th>
+      <th>案件名稱</th>
+      <th>經費</th>
+      <th>中央核定補助
+計畫管制期程</th>
+      <th>預定期程</th>
+      <th>截至113/10/17
+最新執行情形</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+        </table>
+        
+        <br><h2>來義鄉 - 縣政五支箭</h2>
+        <table border="1" class="dataframe dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>鄉鎮</th>
+      <th>一、屏東更韌性</th>
+      <th>二、全齡心照顧</th>
+      <th>三、觀光新戰略</th>
+      <th>四、產業星未來</th>
+      <th>五、安心過生活</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>來義鄉</td>
+      <td></td>
+      <td>學校老舊廁所改善113年施工中2校(來義國小、來義高中)</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+        
+        <!-- 回上一頁按鈕 -->
+        <button class="back-button" onclick="goBack()">回上一頁</button>
+        
+            <script src="scripts.js"></script>
 
-    <table border="1" class="dataframe">
-      <thead>
-        <tr style="text-align: right">
-          <th>鄉鎮市</th>
-          <th>一、屏東更韌性</th>
-          <th>二、全齡心照顧</th>
-          <th>三、觀光新戰略</th>
-          <th>四、產業星未來</th>
-          <th>五、安心過生活</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>來義鄉</td>
-          <td></td>
-          <td>學校老舊廁所改善113年施工中2校(來義國小、來義高中)</td>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-      </tbody>
-    </table>
-
-    <!-- 回上一頁按鈕 -->
-    <button class="back-button" onclick="goBack()">回上一頁</button>
-
-    <script src="scripts.js"></script>
-  </body>
-</html>
+      </body>
+    </html>
+    

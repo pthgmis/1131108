@@ -1,95 +1,86 @@
-<html>
-  <head>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <table id="dataTable" class="dataframe table-view">
-      <thead>
-        <tr>
-          <th>鄉鎮</th>
-          <th>局處</th>
-          <th>案件名稱</th>
-          <th>經費</th>
-          <th>中央核定補助計畫管制期程</th>
-          <th>預定期程</th>
-          <th>截至113/10/17最新執行情形</th>
-        </tr>
-      </thead>
-      <tbody>
-        <!-- Original table rows content with onclick attribute goes here -->
-        <tr onclick="toggleCard(this)">
-          <td>里港鄉</td>
-          <td>水利處</td>
-          <td>土庫排水改善工程</td>
-          <td>
-            總經費：65,000,000&nbsp;中央補助：工程費39,000,000用地費18,200,000
-          </td>
-          <td>完成協議價購：114/12</td>
-          <td>
-            預算書提送：113/10工程上網：114/8工程決標：114/10工程完工：116/1
-          </td>
-          <td>
-            預計10/25提送治理計畫及用地範圍線至水利署核定。決議：請再檢討期程。
-          </td>
-        </tr>
-        <tr onclick="toggleCard(this)">
-          <td>里港鄉</td>
-          <td>地政處</td>
-          <td>里港聯合辦公大樓興建計畫(合署單位：地所/戶所/衛生所/心衛中心)</td>
-          <td>先期規劃費:1,800,000(縣款)預估設計監造費:18,000,000</td>
-          <td>__</td>
-          <td>
-            前置作業：113/6-121.彙整各合署機關空間需求2.籌編規劃設計暨工程監造費用3.規劃設計暨工程監造發包簽約
-          </td>
-          <td>
-            衛生局:爭取衛生福利部「優化偏鄉醫療精進計畫第二期」經費補助7,500萬元[113.5.7已函送(屏衛企字第11331624700號)]，尚未核定。地政處:為加速辦理規劃設計，業已於本(113)年度總預算第一次追加(減)預算編列先期規劃費180萬元，並經屏東縣議會同意先行墊付在案，目前正積極辦理招標文件製作。決議:請持續掌握進度。
-          </td>
-        </tr>
-        <tr onclick="toggleCard(this)">
-          <td>里港鄉</td>
-          <td>民政處</td>
-          <td>里港公墓遷葬案(第一公墓)</td>
-          <td>總經費7,900,000(縣款)</td>
-          <td>__</td>
-          <td>
-            113/8 本府發函公所同意補助113/9
-            工程發包&amp;開工(工期:預計60個工作日)113/12 完工預計113/12 完工
-          </td>
-          <td>
-            1.113/9/19本案正式開工，預計60個工作日完工(113/12/12止)，預計施作墓地數量約50座，辦理起掘及整地作業。2.迄至113/10/17止，工程進度已完成60%，預計於11/10完工。決議:請持續掌握進度。
-          </td>
-        </tr>
-      </tbody>
-    </table>
 
-    <div style="margin-top: 120px"></div>
+    <html>
+      <head>
+        <link rel="stylesheet" href="styles.css" />
+      </head>
+      <body>
+        <h2>里港鄉 - 列管資料</h2>
+        <table id="dataTable" class="dataframe table-view">
+          <table border="1" class="dataframe dataframe table-view">
+  <thead>
+    <tr style="text-align: right;">
+      <th>鄉鎮</th>
+      <th>局處</th>
+      <th>案件名稱</th>
+      <th>經費</th>
+      <th>中央核定補助
+計畫管制期程</th>
+      <th>預定期程</th>
+      <th>截至113/10/17
+最新執行情形</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr onclick="toggleCard(this)">
+      <td>里港鄉</td>
+      <td>水利處</td>
+      <td>土庫排水改善工程</td>
+      <td>總經費：<br>65,000,000<br><br>中央補助：<br>工程費<br>39,000,000<br>用地費<br>18,200,000</td>
+      <td>完成協議價購：114/12</td>
+      <td>預算書提送：113/10<br>工程上網：114/8<br>工程決標：114/10<br>工程完工：116/1</td>
+      <td>預計10/25提送治理計畫及用地範圍線至水利署核定。<br><br>決議：<br>請再檢討期程。</td>
+    </tr>
+    <tr onclick="toggleCard(this)">
+      <td>里港鄉</td>
+      <td>地政處</td>
+      <td>里港聯合辦公大樓興建計畫<br>(合署單位：地所/戶所/衛生所/心衛中心)</td>
+      <td>先期規劃費:<br>1,800,000(縣款)<br><br>預估設計監造費:<br>18,000,000</td>
+      <td>__</td>
+      <td>前置作業：113/6-12<br>1.彙整各合署機關空間需求<br>2.籌編規劃設計暨工程監造費用<br>3.規劃設計暨工程監造發包簽約<br><br><br><br></td>
+      <td>衛生局:<br>爭取衛生福利部「優化偏鄉醫療精進計畫第二期」經費補助7,500萬元[113.5.7已函送(屏衛企字第11331624700號)]，尚未核定。<br><br>地政處:<br>為加速辦理規劃設計，業已於本(113)年度總預算第一次追加(減)預算編列先期規劃費180萬元，並經屏東縣議會同意先行墊付在案，目前正積極辦理招標文件製作。<br><br>決議:<br>請持續掌握進度。<br><br></td>
+    </tr>
+    <tr onclick="toggleCard(this)">
+      <td>里港鄉</td>
+      <td>民政處</td>
+      <td>里港公墓遷葬案(第一公墓)</td>
+      <td>總經費<br>7,900,000<br>(縣款)</td>
+      <td>__</td>
+      <td>113/8  本府發函公所同意補助<br>113/9  工程發包&開工<br>(工期:預計60個工作日)<br>113/12 完工<br>預計113/12 完工</td>
+      <td>1.113/9/19本案正式開工，預計60個工作日完工(113/12/12止)，預計施作墓地數量約50座，辦理起掘及整地作業。<br>2.迄至113/10/17止，工程進度已完成60%，預計於11/10完工。<br><br>決議:<br>請持續掌握進度。</td>
+    </tr>
+  </tbody>
+</table>
+        </table>
+        
+        <br><h2>里港鄉 - 縣政五支箭</h2>
+        <table border="1" class="dataframe dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>鄉鎮</th>
+      <th>一、屏東更韌性</th>
+      <th>二、全齡心照顧</th>
+      <th>三、觀光新戰略</th>
+      <th>四、產業星未來</th>
+      <th>五、安心過生活</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>里港鄉</td>
+      <td>土庫排水改善工程<br>114年土庫排水改善應急工程</td>
+      <td>公共托育設施1處：<br>里港鄉(塔樓活動中心2樓)(預計113年)<br></td>
+      <td></td>
+      <td></td>
+      <td>113年自來水推動重點地區<br>114年自來水推動重點地區<br></td>
+    </tr>
+  </tbody>
+</table>
+        
+        <!-- 回上一頁按鈕 -->
+        <button class="back-button" onclick="goBack()">回上一頁</button>
+        
+            <script src="scripts.js"></script>
 
-    <table border="1" class="dataframe">
-      <thead>
-        <tr style="text-align: right">
-          <th>鄉鎮市</th>
-          <th>一、屏東更韌性</th>
-          <th>二、全齡心照顧</th>
-          <th>三、觀光新戰略</th>
-          <th>四、產業星未來</th>
-          <th>五、安心過生活</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>里港鄉</td>
-          <td>土庫排水改善工程114年土庫排水改善應急工程</td>
-          <td>公共托育設施1處：里港鄉(塔樓活動中心2樓)(預計113年)</td>
-          <td></td>
-          <td></td>
-          <td>113年自來水推動重點地區114年自來水推動重點地區</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <!-- 回上一頁按鈕 -->
-    <button class="back-button" onclick="goBack()">回上一頁</button>
-
-    <script src="scripts.js"></script>
-  </body>
-</html>
+      </body>
+    </html>
+    

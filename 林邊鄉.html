@@ -1,78 +1,77 @@
-<html>
-  <head>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <table id="dataTable" class="dataframe table-view">
-      <thead>
-        <tr>
-          <th>鄉鎮</th>
-          <th>局處</th>
-          <th>案件名稱</th>
-          <th>經費</th>
-          <th>中央核定補助計畫管制期程</th>
-          <th>預定期程</th>
-          <th>截至113/10/17最新執行情形</th>
-        </tr>
-      </thead>
-      <tbody>
-        <!-- Original table rows content with onclick attribute goes here -->
-        <tr onclick="toggleCard(this)">
-          <td>林邊鄉</td>
-          <td>工務處</td>
-          <td>屏東縣林邊鄉崎峰國小老舊校舍拆除重建工程</td>
-          <td>總經費175,219,000(&nbsp;中央補助)</td>
-          <td>__</td>
-          <td>預計完工日期：114/3/29驗收:114/5/10</td>
-          <td>
-            截至113/10/11止，預定進度為54.56%，實際進度為55.19%本週工作項目：二樓室內裝修工程、水電工程、環境清理決議:請持續掌握進度。
-          </td>
-        </tr>
-        <tr onclick="toggleCard(this)">
-          <td>林邊鄉</td>
-          <td>消防局</td>
-          <td>林邊消防分隊辦公廳舍新建工程</td>
-          <td>總經費74,000,000&nbsp;中央補助40,300,000</td>
-          <td></td>
-          <td>
-            辦公廳舍新建工程開工:112/7/20(473日曆天)竣工:113/12車庫及周邊新建工程開工113/10/31(240日歷天)
-            竣工:114/6
-          </td>
-          <td>
-            1.辦公廳舍新建工程:截至10/13止，預計進度82.81%、實際進度82.82%，施作防水及泥作工程、水電工程。2.車庫及周邊新建工程:需俟辦公廳舍防水工程施作完成，鷹架拆除方可開挖車庫地基，預計113/10/31開工。
-          </td>
-        </tr>
-      </tbody>
-    </table>
 
-    <div style="margin-top: 120px"></div>
+    <html>
+      <head>
+        <link rel="stylesheet" href="styles.css" />
+      </head>
+      <body>
+        <h2>林邊鄉 - 列管資料</h2>
+        <table id="dataTable" class="dataframe table-view">
+          <table border="1" class="dataframe dataframe table-view">
+  <thead>
+    <tr style="text-align: right;">
+      <th>鄉鎮</th>
+      <th>局處</th>
+      <th>案件名稱</th>
+      <th>經費</th>
+      <th>中央核定補助
+計畫管制期程</th>
+      <th>預定期程</th>
+      <th>截至113/10/17
+最新執行情形</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr onclick="toggleCard(this)">
+      <td>林邊鄉</td>
+      <td>工務處</td>
+      <td>屏東縣林邊鄉崎峰國小老舊校舍拆除重建工程</td>
+      <td>總經費<br>175,219,000<br>(中央補助)</td>
+      <td>__</td>
+      <td>預計完工日期：114/3/29<br>驗收:114/5/10</td>
+      <td>截至113/10/11止，預定進度為54.56%，實際進度為55.19%<br>本週工作項目：<br>二樓室內裝修工程、水電工程、環境清理<br><br>決議:<br>請持續掌握進度。</td>
+    </tr>
+    <tr onclick="toggleCard(this)">
+      <td>林邊鄉</td>
+      <td>消防局</td>
+      <td>林邊消防分隊辦公廳舍新建工程</td>
+      <td>總經費<br>74,000,000<br>中央補助<br>40,300,000</td>
+      <td></td>
+      <td>辦公廳舍新建工程<br>開工:112/7/20(473日曆天)<br>竣工:113/12<br>車庫及周邊新建工程<br>開工113/10/31(240日歷天) <br>竣工:114/6</td>
+      <td>1.辦公廳舍新建工程:<br>截至10/13止，預計進度82.81%、實際進度82.82%，施作防水及泥作工程、水電工程。<br>2.車庫及周邊新建工程:<br>需俟辦公廳舍防水工程施作完成，<br>鷹架拆除方可開挖車庫地基，預計113/10/31開工。</td>
+    </tr>
+  </tbody>
+</table>
+        </table>
+        
+        <br><h2>林邊鄉 - 縣政五支箭</h2>
+        <table border="1" class="dataframe dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>鄉鎮</th>
+      <th>一、屏東更韌性</th>
+      <th>二、全齡心照顧</th>
+      <th>三、觀光新戰略</th>
+      <th>四、產業星未來</th>
+      <th>五、安心過生活</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>林邊鄉</td>
+      <td>114年屏東縣林邊鄉王爺園溝往林邊溪河堤分洪應急工程</td>
+      <td>敬老卡擴大使用範圍(youbike)</td>
+      <td>鐵人三項(大鵬灣鐵人賽)<br>點亮7座漁港(水利漁港)</td>
+      <td></td>
+      <td>YouBike設站1站</td>
+    </tr>
+  </tbody>
+</table>
+        
+        <!-- 回上一頁按鈕 -->
+        <button class="back-button" onclick="goBack()">回上一頁</button>
+        
+            <script src="scripts.js"></script>
 
-    <table border="1" class="dataframe">
-      <thead>
-        <tr style="text-align: right">
-          <th>鄉鎮市</th>
-          <th>一、屏東更韌性</th>
-          <th>二、全齡心照顧</th>
-          <th>三、觀光新戰略</th>
-          <th>四、產業星未來</th>
-          <th>五、安心過生活</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>林邊鄉</td>
-          <td>114年屏東縣林邊鄉王爺園溝往林邊溪河堤分洪應急工程</td>
-          <td>敬老卡擴大使用範圍(youbike)</td>
-          <td>鐵人三項(大鵬灣鐵人賽)點亮7座漁港(水利漁港)</td>
-          <td></td>
-          <td>YouBike設站1站</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <!-- 回上一頁按鈕 -->
-    <button class="back-button" onclick="goBack()">回上一頁</button>
-
-    <script src="scripts.js"></script>
-  </body>
-</html>
+      </body>
+    </html>
+    
