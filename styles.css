@@ -10,6 +10,9 @@
         border: 1px solid #ddd;
         text-align: left;
       }
+      th {
+        background-color: #e2e2e2;       
+      }
       /* 隱藏表格視圖的多餘欄位（從第5欄起），只顯示前4欄 */
       .table-view thead th:nth-child(n + 5),
       .table-view tbody td:nth-child(n + 5) {
