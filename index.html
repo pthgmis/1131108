@@ -28,6 +28,46 @@
         align-items: center;
         justify-content: center;
       }
+
+      .unit-container {
+        position: absolute;
+        font-size: 85%;
+        left: 10px;
+        top: 450px;
+        width: 45%;
+        /* background-color: rgba(248, 248, 248, 0.8); */
+        padding: 10px;
+        border-radius: 8px;
+        z-index: 1000;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 5px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      .unit-container a {
+        display: flex;
+        padding: 2px;
+        align-items: center;
+        justify-content: center;
+        /* width: 100%; */
+        /* height: 25px; */
+        background-color: #c9e6ff;
+        /* color: #333; */
+        text-align: center;
+        text-decoration: none;
+        font-size: 50%;
+        border-radius: 5px;
+        transition: background-color 0.3s, transform 0.2s;
+      }
+      .unit-container a:hover {
+        background-color: #8ca0b2;
+        transform: scale(1.05);
+      }
+      .disabled-link {
+        color: gray; /* 將文字設為灰色 */
+        pointer-events: none; /* 禁止點擊 */
+        text-decoration: none; /* 移除下劃線 */
+      }
     </style>
   </head>
   <body>
@@ -67,7 +107,10 @@
                     top: 92px;
                   "
                 >
-                  <a href="./霧台鄉.html" class="mw-redirect" title="霧台鄉"
+                  <a
+                    href="./鄉鎮市/霧台鄉.html"
+                    class="mw-redirect"
+                    title="霧台鄉"
                     >霧台鄉</a
                   >
                 </div>
@@ -79,7 +122,7 @@
                     top: 47px;
                   "
                 >
-                  <a href="./三地門鄉.html" title="三地門鄉"
+                  <a href="./鄉鎮市/三地門鄉.html" title="三地門鄉"
                     >三<br />地<br />門<br />鄉</a
                   >
                 </div>
@@ -91,7 +134,7 @@
                     top: 62px;
                   "
                 >
-                  <a href="./高樹鄉.html" title="高樹鄉">高樹鄉</a>
+                  <a href="./鄉鎮市/高樹鄉.html" title="高樹鄉">高樹鄉</a>
                 </div>
                 <div
                   style="
@@ -101,7 +144,7 @@
                     top: 77px;
                   "
                 >
-                  <a href="./里港鄉.html" title="里港鄉">里港鄉</a>
+                  <a href="./鄉鎮市/里港鄉.html" title="里港鄉">里港鄉</a>
                 </div>
                 <div
                   style="
@@ -111,7 +154,7 @@
                     top: 107px;
                   "
                 >
-                  <a href="./鹽埔鄉.html" title="鹽埔鄉">鹽埔鄉</a>
+                  <a href="./鄉鎮市/鹽埔鄉.html" title="鹽埔鄉">鹽埔鄉</a>
                 </div>
                 <div
                   style="
@@ -121,7 +164,9 @@
                     top: 117px;
                   "
                 >
-                  <a href="./九如鄉.html" title="九如鄉">九如鄉</a>
+                  <a href="./鄉鎮市/鄉鎮市/九如鄉.html" title="九如鄉"
+                    >九如鄉</a
+                  >
                 </div>
                 <div
                   style="
@@ -131,7 +176,9 @@
                     top: 162px;
                   "
                 >
-                  <a href="./屏東市.html" title="屏東市">屏東市</a>
+                  <a href="./鄉鎮市/鄉鎮市/屏東市.html" title="屏東市"
+                    >屏東市</a
+                  >
                 </div>
                 <div
                   style="
@@ -141,7 +188,7 @@
                     top: 142px;
                   "
                 >
-                  <a href="./長治鄉.html" title="長治鄉">長治鄉</a>
+                  <a href="./鄉鎮市/長治鄉.html" title="長治鄉">長治鄉</a>
                 </div>
                 <div
                   style="
@@ -151,7 +198,7 @@
                     top: 177px;
                   "
                 >
-                  <a href="./麟洛鄉.html" title="麟洛鄉">麟洛鄉</a>
+                  <a href="./鄉鎮市/麟洛鄉.html" title="麟洛鄉">麟洛鄉</a>
                 </div>
                 <div
                   style="
@@ -161,7 +208,7 @@
                     top: 167px;
                   "
                 >
-                  <a href="./內埔鄉.html" title="內埔鄉">內埔鄉</a>
+                  <a href="./鄉鎮市/內埔鄉.html" title="內埔鄉">內埔鄉</a>
                 </div>
                 <div
                   style="
@@ -171,7 +218,7 @@
                     top: 212px;
                   "
                 >
-                  <a href="./萬丹鄉.html" title="萬丹鄉">萬丹鄉</a>
+                  <a href="./鄉鎮市/萬丹鄉.html" title="萬丹鄉">萬丹鄉</a>
                 </div>
                 <div
                   style="
@@ -181,7 +228,9 @@
                     top: 192px;
                   "
                 >
-                  <a href="./竹田鄉.html" title="竹田鄉">竹<br />田<br />鄉</a>
+                  <a href="./鄉鎮市/竹田鄉.html" title="竹田鄉"
+                    >竹<br />田<br />鄉</a
+                  >
                 </div>
                 <div
                   style="
@@ -191,7 +240,7 @@
                     top: 225px;
                   "
                 >
-                  <a href="./萬巒鄉.html" title="萬巒鄉">萬巒鄉</a>
+                  <a href="./鄉鎮市/萬巒鄉.html" title="萬巒鄉">萬巒鄉</a>
                 </div>
                 <div
                   style="
@@ -201,7 +250,7 @@
                     top: 247px;
                   "
                 >
-                  <a href="./潮州鎮.html" title="潮州鎮">潮州鎮</a>
+                  <a href="./鄉鎮市/潮州鎮.html" title="潮州鎮">潮州鎮</a>
                 </div>
                 <div
                   style="
@@ -211,7 +260,9 @@
                     top: 242px;
                   "
                 >
-                  <a href="./新園鄉.html" title="新園鄉">新<br />園<br />鄉</a>
+                  <a href="./鄉鎮市/新園鄉.html" title="新園鄉"
+                    >新<br />園<br />鄉</a
+                  >
                 </div>
                 <div
                   style="
@@ -221,7 +272,7 @@
                     top: 262px;
                   "
                 >
-                  <a href="./崁頂鄉.html" title="崁頂鄉">崁頂鄉</a>
+                  <a href="./鄉鎮市/崁頂鄉.html" title="崁頂鄉">崁頂鄉</a>
                 </div>
                 <div
                   style="
@@ -231,7 +282,7 @@
                     top: 285px;
                   "
                 >
-                  <a href="./南州鄉.html" title="南州鄉">南州鄉</a>
+                  <a href="./鄉鎮市/南州鄉.html" title="南州鄉">南州鄉</a>
                 </div>
                 <div
                   style="
@@ -241,7 +292,7 @@
                     top: 282px;
                   "
                 >
-                  <a href="./新埤鄉.html" title="新埤鄉">新埤鄉</a>
+                  <a href="./鄉鎮市/新埤鄉.html" title="新埤鄉">新埤鄉</a>
                 </div>
                 <div
                   style="
@@ -251,7 +302,10 @@
                     top: 297px;
                   "
                 >
-                  <a href="./東港鎮.html" class="mw-redirect" title="東港鎮"
+                  <a
+                    href="./鄉鎮市/東港鎮.html"
+                    class="mw-redirect"
+                    title="東港鎮"
                     >東港鎮</a
                   >
                 </div>
@@ -263,7 +317,7 @@
                     top: 382px;
                   "
                 >
-                  <a href="./琉球鄉.html" title="琉球鄉">琉球鄉</a>
+                  <a href="./鄉鎮市/琉球鄉.html" title="琉球鄉">琉球鄉</a>
                 </div>
                 <div
                   style="
@@ -273,7 +327,7 @@
                     top: 309px;
                   "
                 >
-                  <a href="./林邊鄉.html" title="林邊鄉">林邊鄉</a>
+                  <a href="./鄉鎮市/林邊鄉.html" title="林邊鄉">林邊鄉</a>
                 </div>
                 <div
                   style="
@@ -283,7 +337,7 @@
                     top: 323px;
                   "
                 >
-                  <a href="./佳冬鄉.html" title="佳冬鄉">佳冬鄉</a>
+                  <a href="./鄉鎮市/佳冬鄉.html" title="佳冬鄉">佳冬鄉</a>
                 </div>
                 <div
                   style="
@@ -293,7 +347,9 @@
                     top: 313px;
                   "
                 >
-                  <a href="./枋寮鄉.html" title="枋寮鄉">枋<br />寮<br />鄉</a>
+                  <a href="./鄉鎮市/枋寮鄉.html" title="枋寮鄉"
+                    >枋<br />寮<br />鄉</a
+                  >
                 </div>
                 <div
                   style="
@@ -303,7 +359,7 @@
                     top: 157px;
                   "
                 >
-                  <a href="./瑪家鄉.html" title="瑪家鄉">瑪家鄉</a>
+                  <a href="./鄉鎮市/瑪家鄉.html" title="瑪家鄉">瑪家鄉</a>
                 </div>
                 <div
                   style="
@@ -313,7 +369,7 @@
                     top: 202px;
                   "
                 >
-                  <a href="./泰武鄉.html" title="泰武鄉">泰武鄉</a>
+                  <a href="./鄉鎮市/泰武鄉.html" title="泰武鄉">泰武鄉</a>
                 </div>
                 <div
                   style="
@@ -323,7 +379,7 @@
                     top: 272px;
                   "
                 >
-                  <a href="./來義鄉.html" title="來義鄉">來義鄉</a>
+                  <a href="./鄉鎮市/來義鄉.html" title="來義鄉">來義鄉</a>
                 </div>
                 <div
                   style="
@@ -333,7 +389,7 @@
                     top: 338px;
                   "
                 >
-                  <a href="./春日鄉.html" title="春日鄉">春日鄉</a>
+                  <a href="./鄉鎮市/春日鄉.html" title="春日鄉">春日鄉</a>
                 </div>
                 <div
                   style="
@@ -343,7 +399,7 @@
                     top: 431px;
                   "
                 >
-                  <a href="./獅子鄉.html" title="獅子鄉">獅子鄉</a>
+                  <a href="./鄉鎮市/獅子鄉.html" title="獅子鄉">獅子鄉</a>
                 </div>
                 <div
                   style="
@@ -353,7 +409,7 @@
                     top: 383px;
                   "
                 >
-                  <a href="./枋山鄉.html" title="枋山鄉">枋</a>
+                  <a href="./鄉鎮市/枋山鄉.html" title="枋山鄉">枋</a>
                 </div>
                 <div
                   style="
@@ -363,7 +419,7 @@
                     top: 434px;
                   "
                 >
-                  <a href="./枋山鄉.html" title="枋山鄉">山</a>
+                  <a href="./鄉鎮市/枋山鄉.html" title="枋山鄉">山</a>
                 </div>
                 <div
                   style="
@@ -373,7 +429,7 @@
                     top: 470px;
                   "
                 >
-                  <a href="./枋山鄉.html" title="枋山鄉">鄉</a>
+                  <a href="./鄉鎮市/枋山鄉.html" title="枋山鄉">鄉</a>
                 </div>
                 <div
                   style="
@@ -383,7 +439,7 @@
                     top: 551px;
                   "
                 >
-                  <a href="./車城鄉.html" title="車城鄉">車城鄉</a>
+                  <a href="./鄉鎮市/車城鄉.html" title="車城鄉">車城鄉</a>
                 </div>
                 <div
                   style="
@@ -393,7 +449,7 @@
                     top: 503px;
                   "
                 >
-                  <a href="./牡丹鄉.html" title="牡丹鄉">牡丹鄉</a>
+                  <a href="./鄉鎮市/牡丹鄉.html" title="牡丹鄉">牡丹鄉</a>
                 </div>
                 <div
                   style="
@@ -403,7 +459,7 @@
                     top: 579px;
                   "
                 >
-                  <a href="./滿州鄉.html" title="滿州鄉">滿州鄉</a>
+                  <a href="./鄉鎮市/滿州鄉.html" title="滿州鄉">滿州鄉</a>
                 </div>
                 <div
                   style="
@@ -413,22 +469,65 @@
                     top: 604px;
                   "
                 >
-                  <a href="./恆春鎮.html" title="恆春鎮">恆春鎮</a>
+                  <a href="./鄉鎮市/恆春鎮.html" title="恆春鎮">恆春鎮</a>
                 </div>
-
+                <div class="unit-container">
+                  <a href="./機關單位/民政處.html">民政處</a>
+                  <a href="./機關單位/農業處.html">農業處</a>
+                  <a href="./機關單位/城鄉處.html">城鄉處</a>
+                  <a href="./機關單位/地政處.html">地政處</a>
+                  <a href="./機關單位/工務處.html">工務處</a>
+                  <a href="./機關單位/水利處.html">水利處</a>
+                  <a href="./機關單位/客務處.html">客務處</a>
+                  <a href="./機關單位/原民處.html">原民處</a>
+                  <a href="./機關單位/教育處.html">教育處</a>
+                  <a href="./機關單位/文化處.html">文化處</a>
+                  <a href="./機關單位/社會處.html" class="disabled-link"
+                    >社會處</a
+                  >
+                  <a href="./機關單位/交旅處.html">交旅處</a>
+                  <a href="./機關單位/勞青處.html">勞青處</a>
+                  <a href="./機關單位/傳國處.html" class="disabled-link"
+                    >傳國處</a
+                  >
+                  <a href="./機關單位/長照處.html" class="disabled-link"
+                    >長照處</a
+                  >
+                  <a href="./機關單位/行研處.html" class="disabled-link"
+                    >行研處</a
+                  >
+                  <a href="./機關單位/人事處.html" class="disabled-link"
+                    >人事處</a
+                  >
+                  <a href="./機關單位/主計處.html" class="disabled-link"
+                    >主計處</a
+                  >
+                  <a href="./機關單位/政風處.html" class="disabled-link"
+                    >政風處</a
+                  >
+                  <a href="./機關單位/衛生局.html">衛生局</a>
+                  <a href="./機關單位/消防局.html">消防局</a>
+                  <a href="./機關單位/財稅局.html" class="disabled-link"
+                    >財稅局</a
+                  >
+                  <a href="./機關單位/環保局.html" class="disabled-link"
+                    >環保局</a
+                  >
+                  <a href="./機關單位/警察局.html">警察局</a>
+                </div>
                 <div
                   style="
                     position: absolute;
                     /* font-size: 85%; */
-                    left: 100px;
+                    left: 20px;
                     bottom: 50px;
                   "
                 >
                   <a
                     href="https://www.google.com/maps/d/u/0/edit?mid=183tJvbbfsb2r7lRqGz_492Nl8yVb-f8&ll=22.40378887104209%2C120.63229450000001&z=9"
-                    title="列管案件地點"
+                    title="google map 地點"
                     target="_blank"
-                    >列管案件地點</a
+                    >google map 地圖</a
                   >
                 </div>
               </div>

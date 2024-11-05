@@ -1,0 +1,55 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <h2>消防局 - 列管資料</h2>
+    <table id="dataTable" class="dataframe table-view">
+      <table border="1" class="dataframe dataframe table-view">
+        <thead>
+          <tr style="text-align: right">
+            <th>局處</th>
+            <th>鄉鎮</th>
+            <th>案件名稱</th>
+            <th>經費</th>
+            <th>中央核定補助 計畫管制期程</th>
+            <th>預定期程</th>
+            <th>截至113/10/17 最新執行情形</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr onclick="toggleCard(this)">
+            <td>消防局</td>
+            <td>內埔鄉</td>
+            <td>內埔消防分隊辦公廳舍新建工程</td>
+            <td>總經費(縣款)<br />90,000,000</td>
+            <td></td>
+            <td>勞務簽約:112/5/23</td>
+            <td>
+              1.原經費8千萬，因原物料及人力成本增高致營建成本日益攀升，簽准增加114年度200萬及115年度800萬，9/26辦理勞務契約變更且同步請事務所辦理相關預算書圖說修正。<br />2.議價程序於114年法定預算審議通過後續再行辦理。<br /><br />會議決議:<br />請持續掌握進度。
+            </td>
+          </tr>
+          <tr onclick="toggleCard(this)">
+            <td>消防局</td>
+            <td>林邊鄉</td>
+            <td>林邊消防分隊辦公廳舍新建工程</td>
+            <td>總經費<br />74,000,000<br />中央補助<br />40,300,000</td>
+            <td></td>
+            <td>
+              辦公廳舍新建工程<br />開工:112/7/20(473日曆天)<br />竣工:113/12<br />車庫及周邊新建工程<br />開工113/10/31(240日歷天)
+              <br />竣工:114/6
+            </td>
+            <td>
+              1.辦公廳舍新建工程:<br />截至10/13止，預計進度82.81%、實際進度82.82%，施作防水及泥作工程、水電工程。<br />2.車庫及周邊新建工程:<br />需俟辦公廳舍防水工程施作完成，<br />鷹架拆除方可開挖車庫地基，預計113/10/31開工。
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </table>
+
+    <!-- 回上一頁按鈕 -->
+    <button class="back-button" onclick="goBack()">回上一頁</button>
+
+    <script src="../scripts.js"></script>
+  </body>
+</html>

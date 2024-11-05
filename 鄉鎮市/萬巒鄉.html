@@ -1,0 +1,89 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <h2>萬巒鄉 - 列管資料</h2>
+    <table id="dataTable" class="dataframe table-view">
+      <table border="1" class="dataframe dataframe table-view">
+        <thead>
+          <tr style="text-align: right">
+            <th>鄉鎮</th>
+            <th>局處</th>
+            <th>案件名稱</th>
+            <th>經費</th>
+            <th>中央核定補助 計畫管制期程</th>
+            <th>預定期程</th>
+            <th>截至113/10/17 最新執行情形</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr onclick="toggleCard(this)">
+            <td>萬巒鄉</td>
+            <td>水利處</td>
+            <td>185縣道40K+100處易淹水區排水改善工程</td>
+            <td>
+              總經費：<br />191,000,000<br />中央補助：<br />工程費<br />115,000,000<br />用地費<br />53,200,000
+            </td>
+            <td>同意轉正後1個月內完成工程採購作業<br />轉正：113/9/18</td>
+            <td>
+              預算書提送：113/11<br />工程上網：114/5<br />工程決標：114/7<br />工程完工：116/5
+            </td>
+            <td>
+              非都變更內政部尚在審查。<br /><br />決議：<br />請持續追蹤非都變更審查進度。
+            </td>
+          </tr>
+          <tr onclick="toggleCard(this)">
+            <td>萬巒鄉</td>
+            <td>水利處</td>
+            <td>
+              萬金排水3K+122~3K+961護岸新建工程(含橋梁改建)<br />(中段渠道改善作業)
+            </td>
+            <td>
+              萬金排水<br />總經費：<br />101,000,000<br />中央補助：<br />工程費<br />78,900,000<br />用地費<br />14,000,000
+            </td>
+            <td>萬金排水：<br />完成協議價購：114/12</td>
+            <td>
+              萬金排水：<br />預算書提送：113/12<br />工程上網：114/2<br />工程決標：114/4<br />工程完工：115/10
+            </td>
+            <td>
+              萬金排水：<br />水利署113/9/5核定補助，目前配合中央補助經費研議圖說修正事宜。<br />決議：<br />萬金排水一案，請再檢討期程。
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </table>
+
+    <br />
+    <h2>萬巒鄉 - 縣政五支箭</h2>
+    <table border="1" class="dataframe dataframe">
+      <thead>
+        <tr style="text-align: right">
+          <th>鄉鎮</th>
+          <th>一、屏東更韌性</th>
+          <th>二、全齡心照顧</th>
+          <th>三、觀光新戰略</th>
+          <th>四、產業星未來</th>
+          <th>五、安心過生活</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>萬巒鄉</td>
+          <td>萬金排水3K+122~3K+961護岸新建工程(含橋梁改建)</td>
+          <td>社區關懷據點14處</td>
+          <td>屏東巧克力節<br />屏東釀醬生活節</td>
+          <td></td>
+          <td>
+            縣道185甲線(16K+386-19K+796)及縣道185線(45K+775-47K+580)道路拓寬工程(預計115年6月完工)
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- 回上一頁按鈕 -->
+    <button class="back-button" onclick="goBack()">回上一頁</button>
+
+    <script src="../scripts.js"></script>
+  </body>
+</html>

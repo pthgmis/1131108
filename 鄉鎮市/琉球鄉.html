@@ -1,0 +1,82 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <h2>琉球鄉 - 列管資料</h2>
+    <table id="dataTable" class="dataframe table-view">
+      <table border="1" class="dataframe dataframe table-view">
+        <thead>
+          <tr style="text-align: right">
+            <th>鄉鎮</th>
+            <th>局處</th>
+            <th>案件名稱</th>
+            <th>經費</th>
+            <th>中央核定補助 計畫管制期程</th>
+            <th>預定期程</th>
+            <th>截至113/10/17 最新執行情形</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr onclick="toggleCard(this)">
+            <td>琉球鄉</td>
+            <td>工務處</td>
+            <td>琉球全人關懷園區社會福利綜合館興建工程</td>
+            <td>
+              總經費<br />150,000,000<br /><br />中央補助<br />96,075,442<br /><br />離島建設基金<br />37,500,000
+            </td>
+            <td>
+              (中央核定變更)竣工<br />114/08<br /><br />中央規定開辦服務<br />115/2
+            </td>
+            <td>工程完工 114/8<br />正式啟用 114/12<br /></td>
+            <td>
+              工務處:<br />截至113/10/15，累計預定進度
+              :23.70%，累計實際進度:18.02%<br />施工項目:<br />1.基礎灌漿<br />2.災後環境復原<br />琉球護理之家後方增設擋土設施部分，因上方籃球場導水設施施作完成，邊坡溢流土泥已大幅減少，且裸露邊坡係位於計畫道路預定地，考量現況施作空間狹小及避免日後新闢道路拓寬工程二次拆除，護坡規劃採較簡易式石籠層疊三層方式施作。<br />社會處：<br />有關護理之家後方增設擋土牆一案，經社會處處長與長照處處長協調，將由長照處另找經費支應。<br />決議:<br />有關護理之家後方增設擋土牆一案所需經費，請長照處儘速簽辦，並請工務處協助經費估算事宜。
+            </td>
+          </tr>
+          <tr onclick="toggleCard(this)">
+            <td>琉球鄉</td>
+            <td>海漁所</td>
+            <td>琉球新漁港曳船道及周邊設施改善工程</td>
+            <td>設計經費<br />443,000<br />中央補助<br />310,100</td>
+            <td></td>
+            <td>設計完成:113/10/15</td>
+            <td>
+              113/09/27設計廠商提送修正後細部設計<br />113/10/09本所核定修正後細部設計<br />(預計10/21送漁業署備查並同步爭取補助經費)<br />
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </table>
+
+    <br />
+    <h2>琉球鄉 - 縣政五支箭</h2>
+    <table border="1" class="dataframe dataframe">
+      <thead>
+        <tr style="text-align: right">
+          <th>鄉鎮</th>
+          <th>一、屏東更韌性</th>
+          <th>二、全齡心照顧</th>
+          <th>三、觀光新戰略</th>
+          <th>四、產業星未來</th>
+          <th>五、安心過生活</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>琉球鄉</td>
+          <td></td>
+          <td>公共托育設施1處：<br />琉球鄉(琉球社福館3樓)(預計115年)<br /></td>
+          <td>點亮7座漁港(琉球新漁港-大福）</td>
+          <td><br /><br /><br /><br /></td>
+          <td>4座汙水處理設施(本福、中福、上福、大福)(已啟用)</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- 回上一頁按鈕 -->
+    <button class="back-button" onclick="goBack()">回上一頁</button>
+
+    <script src="../scripts.js"></script>
+  </body>
+</html>

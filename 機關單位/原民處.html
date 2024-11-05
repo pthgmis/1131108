@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <h2>原民處 - 列管資料</h2>
+    <table id="dataTable" class="dataframe table-view">
+      <table border="1" class="dataframe dataframe table-view">
+        <thead>
+          <tr style="text-align: right">
+            <th>局處</th>
+            <th>鄉鎮</th>
+            <th>案件名稱</th>
+            <th>經費</th>
+            <th>中央核定補助 計畫管制期程</th>
+            <th>預定期程</th>
+            <th>截至113/10/17 最新執行情形</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr onclick="toggleCard(this)">
+            <td>原民處</td>
+            <td>屏東市</td>
+            <td>113年屏東縣建置原住民族族群主流化友善公共空間</td>
+            <td>
+              總經費:<br />61,664,699<br /><br />中央補助:<br />44,100,000
+            </td>
+            <td>計畫預計<br />114/6/30 完工<br />114/8/01 啟用</td>
+            <td>
+              勞務:<br />113/01/19 勞務訂約<br />113/08/27 完成細設 工程：
+              <br />113/10 公告招標
+            </td>
+            <td>
+              113/09/27細部設計修改完成，10/16辦理為期5天公開閱覽，預計10/22上網公告工程招標。
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </table>
+
+    <!-- 回上一頁按鈕 -->
+    <button class="back-button" onclick="goBack()">回上一頁</button>
+
+    <script src="../scripts.js"></script>
+  </body>
+</html>

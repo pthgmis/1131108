@@ -1,0 +1,81 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <h2>佳冬鄉 - 列管資料</h2>
+    <table id="dataTable" class="dataframe table-view">
+      <table border="1" class="dataframe dataframe table-view">
+        <thead>
+          <tr style="text-align: right">
+            <th>鄉鎮</th>
+            <th>局處</th>
+            <th>案件名稱</th>
+            <th>經費</th>
+            <th>中央核定補助 計畫管制期程</th>
+            <th>預定期程</th>
+            <th>截至113/10/17 最新執行情形</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr onclick="toggleCard(this)">
+            <td>佳冬鄉</td>
+            <td>海漁所</td>
+            <td>屏東縣下埔頭、大庄及東海養殖生產區生態景觀型海水供水系統</td>
+            <td>總經費<br />3,550,000,000<br />中央補助<br />1,462,000,000</td>
+            <td></td>
+            <td>
+              (第一期)海水取水系統工程<br />開工:113/7/1(630日曆天)<br />竣工:115/3/30完工<br />(第二期)站體、陸域配水管工程<br />設計完成:113/4<br />上網公告:113/10
+            </td>
+            <td>
+              海水取水系統工程<br />截至113/9/30預定進度2.73%，實際進度4.67%，施作SP管製造(144m/1194m)及WSP管製造(96m/178m)。<br />站體、陸域配水管工程<br />已流標3次，經檢討後，預計113/10/20辦理重新辦理公開閱覽，俟閱覽後辦理工程上網公告。<br /><br />會議決議:<br />請持續掌握進度
+            </td>
+          </tr>
+          <tr onclick="toggleCard(this)">
+            <td>佳冬鄉</td>
+            <td>海漁所</td>
+            <td>112年塭豐養殖漁業生產區塭豐二中排改善工程(不含設計)</td>
+            <td>總經費<br />94,021,500<br />中央補助<br />77,967,900</td>
+            <td></td>
+            <td>開工：112/11/29(431日曆天)<br />竣工:114/2/1</td>
+            <td>
+              截至113/10/16，預定進度46.04％ ，實際進度48.28％。<br />(1)0K+460~490冠牆模板組立、混凝土澆置<br />(2)0K+500~520冠牆鋼筋綁紮<br />(3)0K+520~550預立板樁打設
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </table>
+
+    <br />
+    <h2>佳冬鄉 - 縣政五支箭</h2>
+    <table border="1" class="dataframe dataframe">
+      <thead>
+        <tr style="text-align: right">
+          <th>鄉鎮</th>
+          <th>一、屏東更韌性</th>
+          <th>二、全齡心照顧</th>
+          <th>三、觀光新戰略</th>
+          <th>四、產業星未來</th>
+          <th>五、安心過生活</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>佳冬鄉</td>
+          <td>
+            114年塭仔調節池簡易抽水站撈污機增設應急工程<br />114年塭子一號排水(海埔橋)下游左岸護岸改善應急工程<br />114年羌園抽水站設備改善應急工程
+          </td>
+          <td>社區關懷據點12處、修繕1處(塭豐社區活動中心)</td>
+          <td>屏東好客米食節</td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- 回上一頁按鈕 -->
+    <button class="back-button" onclick="goBack()">回上一頁</button>
+
+    <script src="../scripts.js"></script>
+  </body>
+</html>

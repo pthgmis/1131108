@@ -1,0 +1,91 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <h2>警察局 - 列管資料</h2>
+    <table id="dataTable" class="dataframe table-view">
+      <table border="1" class="dataframe dataframe table-view">
+        <thead>
+          <tr style="text-align: right">
+            <th>局處</th>
+            <th>鄉鎮</th>
+            <th>案件名稱</th>
+            <th>經費</th>
+            <th>中央核定補助 計畫管制期程</th>
+            <th>預定期程</th>
+            <th>截至113/10/17 最新執行情形</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr onclick="toggleCard(this)">
+            <td>警察局</td>
+            <td>屏東市</td>
+            <td>本局經管屏東市23間宿舍拆除工程</td>
+            <td>總經費(縣款)<br />6,910,000元</td>
+            <td></td>
+            <td>勞務上網公告:113/9/27</td>
+            <td>
+              勞務113/9/27上網公告，113/10/8開標及評選完成，預計10/18辦理議價。
+            </td>
+          </tr>
+          <tr onclick="toggleCard(this)">
+            <td>警察局</td>
+            <td>春日鄉</td>
+            <td>枋寮分局春日分駐所辦公廳舍新建工程(規劃設計)</td>
+            <td>
+              總經費:<br />(中央全額補助)<br />30,000,000<br /><br />規劃設設監造費<br />3,000,000
+            </td>
+            <td>__</td>
+            <td>
+              勞務簽約:113/3/14<br />基本設計核定:113/6/24<br />細設核定:113/10
+            </td>
+            <td>
+              廠商113/9/20提送修正後細部設計資料，經本局9/25審查後，退請廠商再行修正，廠商9/30提送第二次修正，經10/11審查完成核定，預計10/22提送招標相關文件資料。
+            </td>
+          </tr>
+          <tr onclick="toggleCard(this)">
+            <td>警察局</td>
+            <td>枋山鄉</td>
+            <td>枋寮分局枋山分駐所辦公廳舍新建工程(規劃設計)</td>
+            <td>
+              總經費(中央全額補助)<br />30,000,000<br /><br />規劃設設監造費<br />3,000,000
+            </td>
+            <td>__</td>
+            <td>勞務簽約:113/3/14<br />基本設計核定:113/6/24</td>
+            <td>
+              廠商於113/9/20提送修正後細部設計資料，經本局9/25審查後，退請廠商再行修正，廠商9/30提送第二次修正，經10/9審查完成核定，預計10/22提送招標相關文件資料。
+            </td>
+          </tr>
+          <tr onclick="toggleCard(this)">
+            <td>警察局</td>
+            <td>屏東市</td>
+            <td>變更屏東縣屏東市民生段73地號暨周邊體地都市計畫（機12用地)</td>
+            <td>總經費(縣款)<br />1,273,600</td>
+            <td>__</td>
+            <td>勞務簽約:112/6/30</td>
+            <td>
+              因財政部國有財產署遲遲未決定機12機關用地西側土地變更方案，故於112/7/6辦理勞務停工，需俟該署確定變更方案後始能辦理後續開工及個案變更事宜。
+            </td>
+          </tr>
+          <tr onclick="toggleCard(this)">
+            <td>警察局</td>
+            <td>牡丹鄉</td>
+            <td>恆春分局旭海派出所辦公廳舍遷建（用地變更）</td>
+            <td>總經費(縣款)<br />2,310,000</td>
+            <td>__</td>
+            <td></td>
+            <td>
+              1.本案擬於鄉牡丹鄉牡丹灣段736-4地號異地重建，惟該地原為山坡地保育區-交通用地，須變更為特定目的事業用地。<br />2.用地變更預算編入114年度總預算案審議。
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </table>
+
+    <!-- 回上一頁按鈕 -->
+    <button class="back-button" onclick="goBack()">回上一頁</button>
+
+    <script src="../scripts.js"></script>
+  </body>
+</html>

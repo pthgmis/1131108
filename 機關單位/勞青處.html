@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <h2>勞青處 - 列管資料</h2>
+    <table id="dataTable" class="dataframe table-view">
+      <table border="1" class="dataframe dataframe table-view">
+        <thead>
+          <tr style="text-align: right">
+            <th>局處</th>
+            <th>鄉鎮</th>
+            <th>案件名稱</th>
+            <th>經費</th>
+            <th>中央核定補助 計畫管制期程</th>
+            <th>預定期程</th>
+            <th>截至113/10/17 最新執行情形</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr onclick="toggleCard(this)">
+            <td>勞青處</td>
+            <td>潮州鎮</td>
+            <td>潮青特區</td>
+            <td>__</td>
+            <td></td>
+            <td>
+              113/10 預計完成初步工程經費估算、撰寫中央補助計畫及提案爭取經費
+            </td>
+            <td>
+              1.113/9/25向結構技師廠商詢價進行3棟建築物結構詳評所需經費(約95萬元)，相關財源尋覓中。
+              <br /><br />2.113/10/11函文提案補助計畫向教育部爭取經費。<br /><br />(會中補充：教育部長113/10/21視察，請本府先完成特區內建物耐震初、詳評報告後送部，將送院爭取建設經費。)<br /><br />決議：<br />建物初詳評經費請速簽辦報告單。
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </table>
+
+    <!-- 回上一頁按鈕 -->
+    <button class="back-button" onclick="goBack()">回上一頁</button>
+
+    <script src="../scripts.js"></script>
+  </body>
+</html>

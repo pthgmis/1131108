@@ -1,0 +1,73 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <h2>民政處 - 列管資料</h2>
+    <table id="dataTable" class="dataframe table-view">
+      <table border="1" class="dataframe dataframe table-view">
+        <thead>
+          <tr style="text-align: right">
+            <th>局處</th>
+            <th>鄉鎮</th>
+            <th>案件名稱</th>
+            <th>經費</th>
+            <th>中央核定補助 計畫管制期程</th>
+            <th>預定期程</th>
+            <th>截至113/10/17 最新執行情形</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr onclick="toggleCard(this)">
+            <td>民政處</td>
+            <td>里港鄉</td>
+            <td>里港公墓遷葬案(第一公墓)</td>
+            <td>總經費<br />7,900,000<br />(縣款)</td>
+            <td>__</td>
+            <td>
+              113/8 本府發函公所同意補助<br />113/9 工程發包&開工<br />(工期:預計60個工作日)<br />113/12
+              完工<br />預計113/12 完工
+            </td>
+            <td>
+              1.113/9/19本案正式開工，預計60個工作日完工(113/12/12止)，預計施作墓地數量約50座，辦理起掘及整地作業。<br />2.迄至113/10/17止，工程進度已完成60%，預計於11/10完工。<br /><br />決議:<br />請持續掌握進度。
+            </td>
+          </tr>
+          <tr onclick="toggleCard(this)">
+            <td>民政處</td>
+            <td>新園鄉</td>
+            <td>
+              新園鄉公所、東港戶所新園辦公室、警察局新園分駐所、消防局新園分隊拆除重建先期規劃案
+            </td>
+            <td>先期規劃經費<br />280,000</td>
+            <td></td>
+            <td>113/10/11先期規畫成果報告核准</td>
+            <td>
+              警察局<br />113/8/15提供新園分駐所空間需求給勞務公司辦理空間規劃。<br /><br />民政處<br />先期規劃成果報告已於10/11簽准，目前辦理驗收作業。<br /><br />決議:<br />請持續掌握進度。
+            </td>
+          </tr>
+          <tr onclick="toggleCard(this)">
+            <td>民政處</td>
+            <td>車城鄉</td>
+            <td>
+              屏東縣政府警察局恆春分局車城分駐所與恆春戶政事務所車城辦公室辦公廳舍拆除重建工程
+            </td>
+            <td>總經費<br />54,834,400<br />(縣款)</td>
+            <td></td>
+            <td>
+              112/7 工程上網公告<br />112/8 工程決標<br />112/10 開工<br />(工期:463日曆天)<br />113/6
+              工程進度50%<br />114/1 完工<br /><br />預計114/1主體工程完工、114/4完成設備進場<br />
+            </td>
+            <td>
+              1.截至10/15止，預定進度82.42%，實際進度71.06%。<br />2.目前施作主要工項為：安裝衛浴設備及燈具，外牆塗料、清水模及防水工程，地磚鋪設。<br />(會中補充：<br />主體預計於114年農曆年前完工，接續辦理設備進場安裝，預計於114/4月中旬完工)<br /><br />決議:<br />請持續掌握進度。
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </table>
+
+    <!-- 回上一頁按鈕 -->
+    <button class="back-button" onclick="goBack()">回上一頁</button>
+
+    <script src="../scripts.js"></script>
+  </body>
+</html>

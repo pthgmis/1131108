@@ -1,0 +1,70 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <h2>春日鄉 - 列管資料</h2>
+    <table id="dataTable" class="dataframe table-view">
+      <table border="1" class="dataframe dataframe table-view">
+        <thead>
+          <tr style="text-align: right">
+            <th>鄉鎮</th>
+            <th>局處</th>
+            <th>案件名稱</th>
+            <th>經費</th>
+            <th>中央核定補助 計畫管制期程</th>
+            <th>預定期程</th>
+            <th>截至113/10/17 最新執行情形</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr onclick="toggleCard(this)">
+            <td>春日鄉</td>
+            <td>警察局</td>
+            <td>枋寮分局春日分駐所辦公廳舍新建工程(規劃設計)</td>
+            <td>
+              總經費:<br />(中央全額補助)<br />30,000,000<br /><br />規劃設設監造費<br />3,000,000
+            </td>
+            <td>__</td>
+            <td>
+              勞務簽約:113/3/14<br />基本設計核定:113/6/24<br />細設核定:113/10
+            </td>
+            <td>
+              廠商113/9/20提送修正後細部設計資料，經本局9/25審查後，退請廠商再行修正，廠商9/30提送第二次修正，經10/11審查完成核定，預計10/22提送招標相關文件資料。
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </table>
+
+    <br />
+    <h2>春日鄉 - 縣政五支箭</h2>
+    <table border="1" class="dataframe dataframe">
+      <thead>
+        <tr style="text-align: right">
+          <th>鄉鎮</th>
+          <th>一、屏東更韌性</th>
+          <th>二、全齡心照顧</th>
+          <th>三、觀光新戰略</th>
+          <th>四、產業星未來</th>
+          <th>五、安心過生活</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>春日鄉</td>
+          <td></td>
+          <td>學校老舊廁所改善113年完工1校(古樓國小)、施工中1校(春日國小)</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- 回上一頁按鈕 -->
+    <button class="back-button" onclick="goBack()">回上一頁</button>
+
+    <script src="../scripts.js"></script>
+  </body>
+</html>

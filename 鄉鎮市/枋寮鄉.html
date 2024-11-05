@@ -1,0 +1,98 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <h2>枋寮鄉 - 列管資料</h2>
+    <table id="dataTable" class="dataframe table-view">
+      <table border="1" class="dataframe dataframe table-view">
+        <thead>
+          <tr style="text-align: right">
+            <th>鄉鎮</th>
+            <th>局處</th>
+            <th>案件名稱</th>
+            <th>經費</th>
+            <th>中央核定補助 計畫管制期程</th>
+            <th>預定期程</th>
+            <th>截至113/10/17 最新執行情形</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr onclick="toggleCard(this)">
+            <td>枋寮鄉</td>
+            <td>工務處</td>
+            <td>枋寮分局新建廳舍工程</td>
+            <td>
+              總經費:<br />400,000,000<br /><br />中央補助:<br />360,000,000<br />
+            </td>
+            <td>113/11/11中央核定補助<br />中央規定期限114/12/31</td>
+            <td>工程竣工：115/9/3</td>
+            <td>
+              目前正常施工中，截至10/13，預定進度0.62%，實際進度0.9%。<br />施工項目:<br />1.拆除舊有建物<br /><br />決議:<br />請持續掌握進度。
+            </td>
+          </tr>
+          <tr onclick="toggleCard(this)">
+            <td>枋寮鄉</td>
+            <td>衛生局</td>
+            <td>屏東縣枋寮鄉衛生所重建工程</td>
+            <td>預估總經費:<br />105,000,000</td>
+            <td>__</td>
+            <td>
+              1.前置作業：113/3-8<br />(1) 辦理耐震能力初、詳評<br />(2)
+              提報中央重建經費補助計畫<br />(3) 規劃設計需求調查前置作業<br /><br />2.規劃設計階段：113/9-114/5<br />(1)
+              規劃設計評選、訂約<br />(2) 工程預算圖說審查修正<br />(3)
+              建照申請<br />(4) 監造計畫書<br /><br />3.發包階段：114/3-8<br />(1)
+              工程招標工程、訂約<br />(2) 施工計畫品質計劃書<br />(3)
+              五大管線申請<br /><br />4.施工階段：114/8-116/2<br /><br />5.驗收階段：116/3-5<br />(1)
+              竣工驗收<br />(2) 結算核銷<br />
+            </td>
+            <td>
+              經費:<br />衛福部審查中。<br /><br />用地:<br />重建用地評估中。
+            </td>
+          </tr>
+          <tr onclick="toggleCard(this)">
+            <td>枋寮鄉</td>
+            <td>海漁所</td>
+            <td>屏東縣漁業國際化冷鏈加工廠統包工程</td>
+            <td>總經費<br />349,600,000<br />中央補助244,720,000</td>
+            <td>__</td>
+            <td>工程訂約：113/5/21<br />基本設計：113/12</td>
+            <td>
+              廠商於113/9/16繳交基本設計報告(修正5版)，專案管理單位113/9/23函報本所，預計10月底辦理基本設計審查。
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </table>
+
+    <br />
+    <h2>枋寮鄉 - 縣政五支箭</h2>
+    <table border="1" class="dataframe dataframe">
+      <thead>
+        <tr style="text-align: right">
+          <th>鄉鎮</th>
+          <th>一、屏東更韌性</th>
+          <th>二、全齡心照顧</th>
+          <th>三、觀光新戰略</th>
+          <th>四、產業星未來</th>
+          <th>五、安心過生活</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>枋寮鄉</td>
+          <td>三區聯合海水供應站-大庄養殖生產專業區、東海養殖生產專業區</td>
+          <td>學校老舊廁所改善113年完工1校(枋寮高中)</td>
+          <td>點亮7座漁港(枋寮漁港)</td>
+          <td></td>
+          <td>113年自來水推動重點地區</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- 回上一頁按鈕 -->
+    <button class="back-button" onclick="goBack()">回上一頁</button>
+
+    <script src="../scripts.js"></script>
+  </body>
+</html>

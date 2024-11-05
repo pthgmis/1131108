@@ -1,0 +1,78 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <h2>體發中心 - 列管資料</h2>
+    <table id="dataTable" class="dataframe table-view">
+      <table border="1" class="dataframe dataframe table-view">
+        <thead>
+          <tr style="text-align: right">
+            <th>局處</th>
+            <th>鄉鎮</th>
+            <th>案件名稱</th>
+            <th>經費</th>
+            <th>中央核定補助 計畫管制期程</th>
+            <th>預定期程</th>
+            <th>截至113/10/17 最新執行情形</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr onclick="toggleCard(this)">
+            <td>體發中心</td>
+            <td>內埔鄉</td>
+            <td>屏東縣棒球春訓基地</td>
+            <td>勞務經費：<br />9,900,000(縣款)</td>
+            <td>__</td>
+            <td>
+              113/10 完成興辦事業計畫<br />114/3 完成用地變更編定<br />114/4
+              用水計畫初稿送審<br />114/5 出流管制初稿送審<br />114/6
+              環境影響評估初稿送審
+            </td>
+            <td>
+              廠商已提送農業用地變更使用說明書初稿，審查中，另提送服務實施計畫書初稿，目前中心退請廠商補正中。
+            </td>
+          </tr>
+          <tr onclick="toggleCard(this)">
+            <td>體發中心</td>
+            <td>屏東市</td>
+            <td>大同羽球館興建工程</td>
+            <td>總經費：<br />252,475,248<br />（爭取經費中）</td>
+            <td>__</td>
+            <td>＿</td>
+            <td>
+              1.113年7月31日屏府教體字第1138001459號函提送修正計畫報教育部體育署。<br />2.教育部體育署113年8月8日臺教體署設(一)字第1130029876號函知本府該案留署審辦中。
+            </td>
+          </tr>
+          <tr onclick="toggleCard(this)">
+            <td>體發中心</td>
+            <td>潮州鎮</td>
+            <td>潮州棒球場後續營運管理</td>
+            <td>__</td>
+            <td>__</td>
+            <td>__</td>
+            <td>
+              目前場館由中心管理，如需調整管理方式，擬俟全民運後再行研議。
+            </td>
+          </tr>
+          <tr onclick="toggleCard(this)">
+            <td>體發中心</td>
+            <td>萬丹鄉</td>
+            <td>萬丹國中操場改善工程</td>
+            <td>112年預估總經費:<br />30,800,000</td>
+            <td>__</td>
+            <td>__</td>
+            <td>
+              113/10/21執行情形：<br />10/21(星期一)向部長爭取經費，由於該操場地勢高程低於周邊排水，爰建議拆解成兩部分執行。其一優先處理操場外圍及校園銜接校外排水系統工程，待改善後再進行操場內圍鋪面改善工程。
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </table>
+
+    <!-- 回上一頁按鈕 -->
+    <button class="back-button" onclick="goBack()">回上一頁</button>
+
+    <script src="../scripts.js"></script>
+  </body>
+</html>
